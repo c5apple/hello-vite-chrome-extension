@@ -6,13 +6,15 @@ export default defineConfig((opt) => {
     root: 'src',
     build: {
       outDir: '../dist',
-      emptyOutDir: true,
+      emptyOutDir: false,
       rollupOptions: {
         input: {
-          popup: resolve(__dirname, 'src/index.html')
+          content_scripts: resolve(__dirname, 'src/content_scripts.ts'),
         },
         output: {
           entryFileNames: '[name].js',
+          inlineDynamicImports: true,
+          format: 'iife',
         },
       },
     },
