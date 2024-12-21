@@ -16,6 +16,8 @@
     "allowJs": true,
     "checkJs": true,
     "removeComments": true,
+    "noEmit": true,
+    "isolatedModules": true,
     "esModuleInterop": true,
     "strict": true,
     "noImplicitAny": true,
